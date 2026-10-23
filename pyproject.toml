@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scan2net"
+version = "1.0.0"
+description = "3D scan (.ply / .xyz) -> slice -> walkable-space polygons -> route network (Pajek .net) for OrientSim"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy", "scipy", "shapely>=2"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+scan2net = "scan2net.cli:main"
+
+[tool.setuptools]
+packages = ["scan2net", "scan2net.core"]

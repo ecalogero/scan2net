@@ -1,0 +1,5 @@
+__pycache__/
+*.egg-info/
+build/
+examples/school_scan.xyz
+*_scan2net/
